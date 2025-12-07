@@ -10,7 +10,7 @@
     <div class="container">
         <div class="row mb-4">
             <div class="col-md-8 offset-md-2 text-center">
-                <h1>HALLO SELAMAT DATANG DI SISTEM AKADEMIK TEKNOLOGI INFORMASI</h1>
+                <h1>SELAMAT DATANG DI SISTEM AKADEMIK TEKNOLOGI INFORMASI - POLITEKNIK NEGERI PADANG</h1>
                 <p class="lead mt-3">
                     Disini berisi berbagai macam informasi seputar akademik Mahasiswa
                 </p>
