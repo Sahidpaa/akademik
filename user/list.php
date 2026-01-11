@@ -1,5 +1,4 @@
 <?php
-// Pastikan file koneksi sudah ter-include dari index2.php
 include 'koneksi.php';
 
 // Ambil data dari database
@@ -18,7 +17,6 @@ $query = $koneksi->query("SELECT id, username, email, created_at FROM users ORDE
                 <th>Username</th>
                 <th>Email</th>
                 <th>Tgl Terdaftar</th>
-                <th class="text-center">Aksi</th>
             </tr>
         </thead>
         <tbody>

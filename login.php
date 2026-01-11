@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 include 'koneksi.php';
 
 if (isset($_POST['login'])) {
@@ -10,7 +11,6 @@ if (isset($_POST['login'])) {
     
     if ($result->num_rows > 0) {
         $user = $result->fetch_assoc();
-        // Verifikasi password yang di-hash
         if (password_verify($password, $user['password'])) {
             $_SESSION['username'] = $user['username'];
             header("Location: index2.php");
