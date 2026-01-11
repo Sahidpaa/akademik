@@ -1,25 +1,17 @@
 <?php
-session_start();
-
 include 'koneksi.php';
 
-if (isset($_POST['login'])) {
+if (isset($_POST['register'])) {
     $username = $_POST['username'];
-    $password = $_POST['password'];
+    $email = $_POST['email'];
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Enkripsi password
 
-    $result = $koneksi->query("SELECT * FROM users WHERE username='$username'");
+    $sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')";
     
-    if ($result->num_rows > 0) {
-        $user = $result->fetch_assoc();
-        // Verifikasi password yang di-hash
-        if (password_verify($password, $user['password'])) {
-            $_SESSION['username'] = $user['username'];
-            header("Location: index2.php");
-        } else {
-            echo "<script>alert('Password Salah!');</script>";
-        }
+    if ($koneksi->query($sql) === TRUE) {
+        echo "<script>alert('Registrasi Berhasil!'); window.location='login.php';</script>";
     } else {
-        echo "<script>alert('Username tidak ditemukan!');</script>";
+        echo "Error: " . $sql . "<br>" . $koneksi->error;
     }
 }
 ?>
@@ -28,7 +20,7 @@ if (isset($_POST['login'])) {
 <html lang="id">
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Login - Akademik</title>
+    <title>Register - Akademik</title>
 </head>
 <body class="bg-light">
     <div class="container mt-5">
@@ -36,19 +28,23 @@ if (isset($_POST['login'])) {
             <div class="col-md-4">
                 <div class="card shadow">
                     <div class="card-body">
-                        <h4 class="card-title text-center">Login</h4>
+                        <h4 class="card-title text-center">Register</h4>
                         <form method="POST">
                             <div class="mb-3">
                                 <label>Username</label>
                                 <input type="text" name="username" class="form-control" required>
                             </div>
                             <div class="mb-3">
+                                <label>Email</label>
+                                <input type="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
                                 <label>Password</label>
                                 <input type="password" name="password" class="form-control" required>
                             </div>
-                            <button type="submit" name="login" class="btn btn-success w-100">Login</button>
+                            <button type="submit" name="register" class="btn btn-primary w-100">Daftar</button>
                         </form>
-                        <p class="mt-3 text-center">Belum punya akun? <a href="register.php">Daftar</a></p>
+                        <p class="mt-3 text-center">Sudah punya akun? <a href="login.php">Login</a></p>
                     </div>
                 </div>
             </div>
