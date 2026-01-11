@@ -78,7 +78,7 @@ if (!isset($_SESSION['username'])) {
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" <?php echo (isset($_GET['p']) && $_GET['p'] == 'prodi') ? 'active' : ''; ?>" href="index2.php?p=prodi">
                     <i class="fas fa-graduation-cap me-2"></i> Program Studi
                 </a>
             </li>
@@ -129,6 +129,8 @@ if (!isset($_SESSION['username'])) {
                         if($page == 'create') include 'mahasiswa/create.php';
                         if($page == 'edit') include 'mahasiswa/edit.php';
                         if($page == 'user') include 'user/list.php';
+                        if($page == 'prodi') include 'prodi/list.php';
+                        if($page == 'edit_prodi') include 'prodi/edit.php'; // Tambahkan baris ini
                     ?>
                 </div>
             </div>

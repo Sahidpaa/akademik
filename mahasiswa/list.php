@@ -26,8 +26,17 @@ $no = 1;
 $data = $tampil->fetch_all(MYSQLI_ASSOC); 
 ?>
 
-<h1>List Data Mahasiswa</h1>
-<a href="index2.php?p=create" class="btn btn-primary mb-3">Input Data Mahasiswa</a>
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h4 class="fw-bold"><i class="fas fa-graduation-cap me-2 text-primary"></i> List Data Mahasiswa</h4>
+   
+</div>
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <a href="index2.php?p=create" class="btn btn-primary shadow-sm px-4 py-2">
+        <i class="fas fa-plus-circle me-2"></i>Tambah Mahasiswa
+    </a>
+</div>
+
 <table class="table table-bordered table-striped">
     <thead class="table-primary">
         <tr>
