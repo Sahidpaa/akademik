@@ -31,13 +31,6 @@ $query = $koneksi->query("SELECT id, username, email, created_at FROM users ORDE
                 <td><strong><?= $row['username']; ?></strong></td>
                 <td><?= $row['email']; ?></td>
                 <td><?= date('d M Y', strtotime($row['created_at'])); ?></td>
-                <td class="text-center">
-                    <a href="user/hapus.php?id=<?= $row['id']; ?>" 
-                       class="btn btn-danger btn-sm" 
-                       onclick="return confirm('Apakah Anda yakin ingin menghapus user ini?')">
-                        <i class="fas fa-trash"></i> Hapus
-                    </a>
-                </td>
             </tr>
             <?php endwhile; ?>
         </tbody>
