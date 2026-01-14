@@ -3,7 +3,7 @@
 session_start();
 include 'koneksi.php';
 if (!isset($_SESSION['username'])) {
-    header("Location: index2.php");
+    header("Location: index.php");
     exit();
 }
 ?>
@@ -67,22 +67,22 @@ if (!isset($_SESSION['username'])) {
     <div class="sidebar">
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link <?php echo (!isset($_GET['p']) || $_GET['p'] == 'home') ? 'active' : ''; ?>" href="index2.php">
+                <a class="nav-link <?php echo (!isset($_GET['p']) || $_GET['p'] == 'home') ? 'active' : ''; ?>" href="index.php">
                     <i class="fas fa-tachometer-alt me-2"></i> Dashboard
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <?php echo (isset($_GET['p']) && $_GET['p'] == 'mahasiswa') ? 'active' : ''; ?>" href="index2.php?p=mahasiswa">
+                <a class="nav-link <?php echo (isset($_GET['p']) && $_GET['p'] == 'mahasiswa') ? 'active' : ''; ?>" href="index.php?p=mahasiswa">
                     <i class="fas fa-users me-2"></i> Data Mahasiswa
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <?php echo (isset($_GET['p']) && $_GET['p'] == 'prodi') ? 'active' : ''; ?>" href="index2.php?p=prodi">
+                <a class="nav-link <?php echo (isset($_GET['p']) && $_GET['p'] == 'prodi') ? 'active' : ''; ?>" href="index.php?p=prodi">
                     <i class="fas fa-graduation-cap me-2"></i> Program Studi
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <?= (isset($_GET['p']) && $_GET['p'] == 'user') ? 'active' : ''; ?>" href="index2.php?p=user">
+                <a class="nav-link <?= (isset($_GET['p']) && $_GET['p'] == 'user') ? 'active' : ''; ?>" href="index.php?p=user">
                     <i class="fas fa-user-cog me-2"></i> Manajemen User
                 </a>
             </li>
