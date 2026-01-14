@@ -32,7 +32,7 @@ $data = $tampil->fetch_all(MYSQLI_ASSOC);
 </div>
 
 <div class="d-flex justify-content-between align-items-center mb-4">
-    <a href="index2.php?p=create" class="btn btn-primary shadow-sm px-4 py-2">
+    <a href="index.php?p=create" class="btn btn-primary shadow-sm px-4 py-2">
         <i class="fas fa-plus-circle me-2"></i>Tambah Mahasiswa
     </a>
 </div>

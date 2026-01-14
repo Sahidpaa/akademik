@@ -42,5 +42,5 @@ $data_prodi = $query_prodi->fetch_all(MYSQLI_ASSOC);
     </div>
 
     <button type="submit" name="submit" class="btn btn-primary">Simpan Data</button>
-    <a href="index2.php?p=mahasiswa" class="btn btn-secondary">Cancel</a>
+    <a href="index.php?p=mahasiswa" class="btn btn-secondary">Cancel</a>
 </form>

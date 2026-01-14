@@ -13,7 +13,7 @@ if (isset($_POST['login'])) {
         $user = $result->fetch_assoc();
         if (password_verify($password, $user['password'])) {
             $_SESSION['username'] = $user['username'];
-            header("Location: index2.php");
+            header("Location: index.php");
         } else {
             echo "<script>alert('Password Salah!');</script>";
         }
