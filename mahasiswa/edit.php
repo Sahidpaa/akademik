@@ -35,7 +35,7 @@ $data_prodi_list = $query_prodi->fetch_all(MYSQLI_ASSOC);
             <option value="">-- Pilih Program Studi --</option>
             <?php foreach ($data_prodi_list as $prodi): ?>
                 <?php 
-                    $selected = ($prodi['id'] == $data['program_studi_id']) ? 'selected' : '';
+                    $selected = ($prodi['id'] == $data['program_studi']) ? 'selected' : '';
                 ?>
                 <option value="<?= $prodi['id'] ?>" <?= $selected ?>>
                     <?= $prodi['nama_prodi'] ?>
@@ -49,5 +49,5 @@ $data_prodi_list = $query_prodi->fetch_all(MYSQLI_ASSOC);
     </div>
 
     <button type="submit" name="update" class="btn btn-primary">Update Data</button>
-    <a href="index2.php?p=mahasiswa" class="btn btn-secondary">Cancel</a>
+    <a href="index.php?p=mahasiswa" class="btn btn-secondary">Cancel</a>
 </form>

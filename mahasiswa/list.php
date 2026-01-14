@@ -27,7 +27,7 @@ $data = $tampil->fetch_all(MYSQLI_ASSOC);
 ?>
 
 <div class="d-flex justify-content-between align-items-center mb-4">
-    <h4 class="fw-bold"><i class="fas fa-graduation-cap me-2 text-primary"></i> List Data Mahasiswa</h4>
+    <h4 class="fw-bold"><i class="fas fa-graduation-cap me-2 text-dark"></i> List Data Mahasiswa</h4>
    
 </div>
 
@@ -38,7 +38,7 @@ $data = $tampil->fetch_all(MYSQLI_ASSOC);
 </div>
 
 <table class="table table-bordered table-striped">
-    <thead class="table-primary">
+    <thead class="table-dark">
         <tr>
             <th scope="col">No</th>
             <th scope="col">NIM</th>
@@ -59,7 +59,7 @@ $data = $tampil->fetch_all(MYSQLI_ASSOC);
                 <td><?= $row['nama_prodi'] ?></td> 
                 <td><?= $row['alamat'] ?></td>
                 <td>
-                    <a href="index2.php?p=edit&key=<?=$row['nim']?>" class="btn btn-warning btn-sm">Edit</a>
+                    <a href="index.php?p=edit&key=<?=$row['nim']?>" class="btn btn-warning btn-sm">Edit</a>
                     <a href="mahasiswa/proses.php?nim=<?= $row['nim'] ?>&aksi=hapus" class="btn btn-danger btn-sm" onclick="return confirm('Apakah anda yakin?')"> Hapus</a>
                 </td>
             </tr>

@@ -5,9 +5,9 @@
     <div class="container">
         <div class="row mb-4">
             <div class="col-md-8 offset-md-2 text-center">
-                <h3>SELAMAT DATANG DI SISTEM AKADEMIK TEKNOLOGI INFORMASI - POLITEKNIK NEGERI PADANG</h3>
+                <h4>SELAMAT DATANG DI SISTEM AKADEMIK</h4>
                 <p class="lead mt-3">
-                    Disini berisi berbagai macam informasi seputar akademik Mahasiswa
+                    Sistem Akademik Politeknik Negeri Padang
                 </p>
             </div>
         </div>

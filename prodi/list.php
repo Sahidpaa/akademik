@@ -4,7 +4,7 @@ $query = $koneksi->query("SELECT * FROM program_studi ORDER BY id DESC");
 ?>
 
 <div class="d-flex justify-content-between align-items-center mb-4">
-    <h4 class="fw-bold"><i class="fas fa-graduation-cap me-2 text-primary"></i> Program Studi</h4>
+    <h4 class="fw-bold"><i class="fas fa-graduation-cap me-2 text-dark"></i> Program Studi</h4>
    
 </div>
 
@@ -12,7 +12,7 @@ $query = $koneksi->query("SELECT * FROM program_studi ORDER BY id DESC");
     <div class="card-body">
         <div class="table-responsive">
             <table class="table table-hover align-middle">
-                <thead class="table-light">
+                <thead class="table-dark">
                     <tr>
                         <th width="50">No</th>
                         <th>Nama Prodi</th>
