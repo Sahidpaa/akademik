@@ -15,7 +15,7 @@ if(isset($_POST['submit'])){
     $query = $koneksi->query($sql); 
     if($query){
         
-        header('Location: ../index2.php?p=mahasiswa'); 
+        header('Location: ../index.php?p=mahasiswa'); 
     } else {
         echo "Gagal menyimpan data: " . $koneksi->error;
     }    
