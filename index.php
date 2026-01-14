@@ -2,10 +2,12 @@
 <?php
 session_start();
 include 'koneksi.php';
+
 if (!isset($_SESSION['username'])) {
-    header("Location: index.php");
+    header("Location: login.php"); 
     exit();
 }
+?>
 ?>
 <!doctype html>
 <html lang="en">
@@ -86,6 +88,11 @@ if (!isset($_SESSION['username'])) {
                     <i class="fas fa-user-cog me-2"></i> Manajemen User
                 </a>
             </li>
+            <li class="nav-item">
+            <a class="nav-link <?= (isset($_GET['p']) && $_GET['p'] == 'profil') ? 'active' : ''; ?>" href="index.php?p=profil">
+                <i class="fas fa-user-circle me-2"></i> Edit Profil
+            </a>
+        </li>
         </ul>
     </div>
 
@@ -130,6 +137,7 @@ if (!isset($_SESSION['username'])) {
                         if($page == 'user') include 'user/list.php';
                         if($page == 'prodi') include 'prodi/list.php';
                         if($page == 'edit_prodi') include 'prodi/edit.php'; 
+                        if($page == 'profil') include 'user/profil.php';
                     ?>
                 </div>
             </div>
